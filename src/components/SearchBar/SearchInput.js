@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styled from "styled-components";
 
 export default function SearchInput() {
   const [searchEngine, setSearchEngine] = useState("Google");
+  const nameInputRef = useRef();
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
-      let searchValue = event.target.value;
+      let searchValue = nameInputRef.current.value;
       if (searchEngine === "Google") {
         window.open(`https://www.google.com/search?q=${searchValue}`);
       } else if (searchEngine === "DuckDuckGo") {
@@ -20,5 +21,11 @@ export default function SearchInput() {
     }
   };
 
-  return <input onKeyDown={handleKeyDown} placeHolder={searchEngine}></input>;
+  return (
+    <input
+      onKeyDown={handleKeyDown}
+      placeholder={searchEngine}
+      ref={nameInputRef}
+    ></input>
+  );
 }
