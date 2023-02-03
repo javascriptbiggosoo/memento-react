@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from "styled-components";
-import "./App.css";
 import bgImg from "./assets/background-img/qhd/tony-lee-i_XLLP08BOc-unsplash.jpg";
 import Bottom from "./components/layout/Bottom";
 import Center from "./components/layout/Center";
@@ -10,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html,
 body,
 div,
