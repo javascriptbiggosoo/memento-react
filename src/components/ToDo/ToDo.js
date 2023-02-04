@@ -29,7 +29,6 @@ export default function ToDo() {
     );
     // console.log(initialToDos);
     setToDos(initialToDos);
-    setItem("toDos", initialToDos);
   }, []);
 
   const handleAddToDo = (toDo) => {
