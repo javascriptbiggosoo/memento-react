@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Memento-with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://tbs01215.github.io/memento-react/
 
-## Available Scripts
+브라우저 시작 페이지에서 다양한 기능을 사용할 수 있도록 해주는 [momentum](https://momentumdash.com/)을 리액트를 이용해 클론코딩합니다.
+바닐라 자바스크립트만 사용했다면 일일이 구현해야했을 요소들이 자동으로 처리됩니다.
 
-In the project directory, you can run:
+## 구현
 
-### `npm start`
+### 좌측 상단
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 검색어 입력시 구글 포털 검색창을 보여줍니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 우측 상단
 
-### `npm test`
+- 사용자가 위치서비스를 허용하면 그 위치의 날씨를 알려줍니다.
+  오픈 API인 https://openweathermap.org/ 에서 정보를 받아옵니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 중앙
 
-### `npm run build`
+- 현재 시간을 띄워줍니다.
+- 사용자의 이름을 입력받아 인삿말을 띄워줍니다.
+  입력시 이름이 로컬스토리지로 저장되며 이름 변경 버튼이 생성됩니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 우측 하단
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 할 일을 입력받아 로컬스토리지에 저장합니다.
+  클릭시 완료여부를 토글할 수 있습니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="https://user-images.githubusercontent.com/28939278/215250935-17c1774c-8d08-47e8-a586-7aaadacd57a3.gif">
