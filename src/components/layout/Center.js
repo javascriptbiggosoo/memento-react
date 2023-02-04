@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Clock from "../Clock/Clock";
 import Greeting from "./../Greeting/Greeting";
 
 const CenterContainer = styled.main`
@@ -9,6 +10,7 @@ const CenterContainer = styled.main`
 export default function Center() {
   return (
     <CenterContainer>
+      <Clock></Clock>
       <Greeting></Greeting>
     </CenterContainer>
   );
