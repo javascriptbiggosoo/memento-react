@@ -10,7 +10,8 @@ export default function Greeting() {
 
   useEffect(() => {
     setUserName(getItem("userName", ""));
-  }, []);
+    userName && setIsNameChanging(false);
+  }, [userName]);
 
   const handleSubmit = (userName) => {
     setUserName(userName);

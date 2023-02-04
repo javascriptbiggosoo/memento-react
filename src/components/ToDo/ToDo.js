@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import ToDoInput from "./ToDoInput";
 import ToDoList from "./ToDoList";
+import { useEffect, useState } from "react";
+import { getItem, setItem } from "./../../utils/localStorage";
 
 const ToDoContainer = styled.section`
   border: 1px solid;
@@ -19,10 +21,42 @@ const ToDoContainer = styled.section`
 `;
 
 export default function ToDo() {
+  const [toDos, setToDos] = useState([]);
+
+  useEffect(() => {
+    const initialToDos = getItem("toDos", []).filter(
+      (toDo) => toDo.isCompleted === false
+    );
+    // console.log(initialToDos);
+    setToDos(initialToDos);
+    setItem("toDos", initialToDos);
+  }, []);
+
+  const handleAddToDo = (toDo) => {
+    setToDos((toDos) => {
+      return [...toDos, { toDo: toDo, isCompleted: false }];
+    });
+    setItem("toDos", toDos);
+  };
+  const handleToDoClick = (toDoIdx) => {
+    setToDos((toDos) =>
+      toDos.map(({ toDo, isCompleted }, idx) => {
+        if (idx === toDoIdx) {
+          isCompleted = !isCompleted;
+        }
+        return { toDo, isCompleted };
+      })
+    );
+  };
+
+  useEffect(() => {
+    setItem("toDos", toDos);
+  }, [toDos]);
+
   return (
     <ToDoContainer>
-      <ToDoList></ToDoList>
-      <ToDoInput></ToDoInput>
+      <ToDoInput onAddToDo={handleAddToDo}></ToDoInput>
+      <ToDoList toDos={toDos} onToDoClick={handleToDoClick}></ToDoList>
     </ToDoContainer>
   );
 }
