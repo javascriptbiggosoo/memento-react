@@ -10,6 +10,7 @@ https://tbs01215.github.io/memento-react/
 ### 좌측 상단
 
 - 검색어 입력시 구글 포털 검색창을 보여줍니다.
+- Google, DuckDuckGo, Naver 중 원하는 곳에서 검색할 수 있습니다.
 
 ### 우측 상단
 
@@ -26,5 +27,7 @@ https://tbs01215.github.io/memento-react/
 
 - 할 일을 입력받아 로컬스토리지에 저장합니다.
   클릭시 완료여부를 토글할 수 있습니다.
+- 완료 처리한 상태로 페이지를 새로고침하면 해당 할 일은 표시되지 않습니다.
 
-<img src="https://user-images.githubusercontent.com/28939278/215250935-17c1774c-8d08-47e8-a586-7aaadacd57a3.gif">
+<img src="https://user-images.githubusercontent.com/28939278/216800752-4afec1fa-ca35-466b-add2-86d1f2e8a7a5.gif">
+
