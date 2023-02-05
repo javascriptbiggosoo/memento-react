@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/memento-react/static/css/main.e6c13ad2.css",
-    "main.js": "/memento-react/static/js/main.5517c545.js",
+    "main.js": "/memento-react/static/js/main.3b352866.js",
     "static/media/tony-lee-i_XLLP08BOc-unsplash.jpg": "/memento-react/static/media/tony-lee-i_XLLP08BOc-unsplash.317ae764ee3b655849b2.jpg",
     "index.html": "/memento-react/index.html",
     "main.e6c13ad2.css.map": "/memento-react/static/css/main.e6c13ad2.css.map",
-    "main.5517c545.js.map": "/memento-react/static/js/main.5517c545.js.map"
+    "main.3b352866.js.map": "/memento-react/static/js/main.3b352866.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.5517c545.js"
+    "static/js/main.3b352866.js"
   ]
 }
