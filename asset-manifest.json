@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/javascriptbiggosoo/memento-react/static/css/main.e6c13ad2.css",
-    "main.js": "/javascriptbiggosoo/memento-react/static/js/main.bd677502.js",
-    "static/media/tony-lee-i_XLLP08BOc-unsplash.jpg": "/javascriptbiggosoo/memento-react/static/media/tony-lee-i_XLLP08BOc-unsplash.317ae764ee3b655849b2.jpg",
-    "index.html": "/javascriptbiggosoo/memento-react/index.html",
-    "main.e6c13ad2.css.map": "/javascriptbiggosoo/memento-react/static/css/main.e6c13ad2.css.map",
-    "main.bd677502.js.map": "/javascriptbiggosoo/memento-react/static/js/main.bd677502.js.map"
+    "main.css": "/memento-react/static/css/main.e6c13ad2.css",
+    "main.js": "/memento-react/static/js/main.7456d696.js",
+    "static/media/tony-lee-i_XLLP08BOc-unsplash.jpg": "/memento-react/static/media/tony-lee-i_XLLP08BOc-unsplash.317ae764ee3b655849b2.jpg",
+    "index.html": "/memento-react/index.html",
+    "main.e6c13ad2.css.map": "/memento-react/static/css/main.e6c13ad2.css.map",
+    "main.7456d696.js.map": "/memento-react/static/js/main.7456d696.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.bd677502.js"
+    "static/js/main.7456d696.js"
   ]
 }
