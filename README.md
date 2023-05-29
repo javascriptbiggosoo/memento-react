@@ -30,4 +30,3 @@ https://javascriptbiggosoo.github.io/memento-react/
 - 완료 처리한 상태로 페이지를 새로고침하면 해당 할 일은 표시되지 않습니다.
 
 <img src="https://user-images.githubusercontent.com/28939278/216800752-4afec1fa-ca35-466b-add2-86d1f2e8a7a5.gif">
-

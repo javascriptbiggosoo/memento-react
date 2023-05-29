@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { getWeatherData } from "../../APIs/weatherMap";
+import { motion } from "framer-motion";
 
-const WeatherContainer = styled.section`
+const WeatherContainer = styled.section``;
+const Div = styled(motion.div)`
   display: flex;
 `;
-const Img = styled.img`
+const Img = styled(motion.img)`
   height: 80px;
 `;
 export default function Weather() {
@@ -41,7 +43,10 @@ export default function Weather() {
       {isLoading ? (
         "~ Loading ~"
       ) : (
-        <>
+        <Div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 2 } }}
+        >
           <div>
             <div>{weatherData.currentWeather}</div>
             <div>{Math.round(weatherData.currentTemp)}°C</div>
@@ -49,7 +54,7 @@ export default function Weather() {
           <Img
             src={`http://openweathermap.org/img/wn/${weatherData.weatherIcon}@2x.png`}
           ></Img>
-        </>
+        </Div>
       )}
     </WeatherContainer>
   );
