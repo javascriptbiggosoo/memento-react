@@ -1,5 +1,5 @@
 import Setting from "../Setting/Setting";
-import ToDo from "../ToDo/ToDo";
+import ToDo from "../ToDo/Index";
 import styled from "styled-components";
 
 const BottomContainer = styled.footer`

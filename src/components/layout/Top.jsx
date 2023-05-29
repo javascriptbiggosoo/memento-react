@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import SearchBar from "../SearchBar/SearchBar";
-import Weather from "../Weather/Weather";
+import SearchBar from "../SearchBar/Index";
+import Weather from "../Weather/Index";
 
 const TopContainer = styled.header`
   display: flex;

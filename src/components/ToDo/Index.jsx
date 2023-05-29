@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ToDoInput from "./ToDoInput";
 import ToDoList from "./ToDoList";
 import { useEffect, useState } from "react";
-import { getItem, setItem } from "./../../utils/localStorage";
+import { getItem, setItem } from "../../utils/localStorage";
 
 const ToDoContainer = styled.section`
   border: 1px solid;

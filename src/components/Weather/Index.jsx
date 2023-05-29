@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import { getWeatherData } from "./../../APIs/weatherMap";
+import { getWeatherData } from "../../APIs/weatherMap";
 
 const WeatherContainer = styled.section`
   display: flex;
@@ -28,7 +28,7 @@ export default function Weather() {
         },
         (err) => {
           alert(
-            "위치 추적을 허용하지 않았거나 크롬 브라우저가 아닌 경우 날씨가 표시되지 않을 수 있습니다."
+            "크롬 브라우저가 아니거나 위치 추적을 허용하지 않은 경우 날씨가 표시되지 않을 수 있습니다."
           );
           console.error(err);
         }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Clock from "../Clock/Clock";
-import Greeting from "./../Greeting/Greeting";
+import Clock from "../Clock/Index";
+import Greeting from "../Greeting/Index";
 
 const CenterContainer = styled.main`
   width: 100%;
