@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import ToDoInput from "./ToDoInput";
 import ToDoList from "./ToDoList";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { getItem, setItem } from "../../utils/localStorage";
 import { useRecoilState } from "recoil";
 import { toDoState } from "../../atoms";
