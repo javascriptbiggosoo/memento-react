@@ -1,6 +1,6 @@
 # Memento-with React
 
-https://tbs01215.github.io/memento-react/
+https://javascriptbiggosoo.github.io/memento-react/
 
 브라우저 시작 페이지에서 다양한 기능을 사용할 수 있도록 해주는 [momentum](https://momentumdash.com/)을 리액트를 이용해 클론코딩합니다.
 바닐라 자바스크립트만 사용했다면 일일이 구현해야했을 요소들이 자동으로 처리됩니다.

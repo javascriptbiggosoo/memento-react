@@ -1,6 +1,7 @@
 import styled from "styled-components";
+
 const Div = styled.div`
-  font-size: 5em;
+  font-size: 4em;
 `;
 
 export default function GreetingMessage({ userName }) {

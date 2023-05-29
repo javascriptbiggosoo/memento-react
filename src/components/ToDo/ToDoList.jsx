@@ -3,6 +3,7 @@ import styled from "styled-components";
 const ToDo = styled.li`
   margin: 2px 0 2px 0;
   opacity: ${({ isCompleted }) => isCompleted && "0.5"};
+  list-style: none;
 `;
 
 export default function ToDoList({ toDos, onToDoClick }) {
