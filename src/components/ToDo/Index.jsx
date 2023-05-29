@@ -3,6 +3,8 @@ import ToDoInput from "./ToDoInput";
 import ToDoList from "./ToDoList";
 import { useEffect, useState } from "react";
 import { getItem, setItem } from "../../utils/localStorage";
+import { useRecoilState } from "recoil";
+import { toDoState } from "../../atoms";
 
 const ToDoContainer = styled.section`
   border: 1px solid;
@@ -21,7 +23,7 @@ const ToDoContainer = styled.section`
 `;
 
 export default function ToDo() {
-  const [toDos, setToDos] = useState([]);
+  const [toDos, setToDos] = useRecoilState(toDoState);
 
   useEffect(() => {
     const initialToDos = getItem("toDos", []).filter(
@@ -29,7 +31,7 @@ export default function ToDo() {
     );
     // console.log(initialToDos);
     setToDos(initialToDos);
-  }, []);
+  }, [setToDos]);
 
   const handleAddToDo = (toDo) => {
     setToDos((toDos) => {
