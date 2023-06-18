@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import bgImg from "./assets/background-img/qhd/tony-lee-i_XLLP08BOc-unsplash.jpg";
-import Bottom from "./components/layout/Bottom";
-import Center from "./components/layout/Center";
-import Top from "./components/layout/Top";
+import Bottom from "./components/Layout/Bottom";
+import Center from "./components/Layout/Center";
+import Top from "./components/Layout/Top";
 
 const Container = styled.div`
   padding: 8px;
