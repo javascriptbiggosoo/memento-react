@@ -1,30 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import styled from "styled-components";
-
-const SettingButton = styled.button``;
-
-const Overlay = styled(motion.div)`
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const overlay = {
-  hidden: { backgroundColor: "rgba(0, 0, 0, 0)" },
-  visible: {
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-    transition: { duration: 0.3 },
-  },
-  exit: { backgroundColor: "rgba(0, 0, 0, 0)" },
-};
+import { Overlay } from "../UI/Overlay";
 
 const Box = styled(motion.div)`
   background-color: rgba(225, 225, 225, 1);
@@ -39,7 +16,7 @@ const Box = styled(motion.div)`
 
 export default function Setting() {
   const [showSettings, setShowSettings] = useState(false);
-  const toggleSettings = (ev) => {
+  const toggleSettings = (ev: React.MouseEvent<HTMLOrSVGElement>) => {
     if (ev.currentTarget !== ev.target) return;
     setShowSettings((prev) => !prev);
   };
@@ -63,11 +40,9 @@ export default function Setting() {
       </svg>
       {showSettings && (
         <Overlay
-          onClick={toggleSettings}
-          variants={overlay}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
+          hideOverlay={() => {
+            setShowSettings(false);
+          }}
         >
           <Box
             style={{
