@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const addZero = (num) => {
+const 십의자리0채우기 = (num) => {
   if (num < 10) {
     return "0" + num;
   }
@@ -26,7 +26,9 @@ export default function Clock() {
   return (
     <ClockContainer>
       {dateNow &&
-        `${addZero(dateNow.getHours())}:${addZero(dateNow.getMinutes())}`}
+        `${십의자리0채우기(dateNow.getHours())}:${십의자리0채우기(
+          dateNow.getMinutes()
+        )}`}
     </ClockContainer>
   );
 }
