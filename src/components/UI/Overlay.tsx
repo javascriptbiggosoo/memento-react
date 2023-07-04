@@ -17,7 +17,6 @@ const Container = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   z-index: 9999;
 `;
 

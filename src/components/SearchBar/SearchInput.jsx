@@ -1,8 +1,10 @@
 import { useRef, useState } from "react";
+import { useRecoilState } from "recoil";
 import styled from "styled-components";
+import { searchEngineState } from "../../atoms";
 
 export default function SearchInput() {
-  const [searchEngine, setSearchEngine] = useState("Google");
+  const [searchEngine, setSearchEngine] = useRecoilState(searchEngineState);
   const [searchText, setSearchText] = useState("");
 
   const handleSubmit = (event) => {
@@ -15,6 +17,8 @@ export default function SearchInput() {
       window.open(
         `https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=${searchText}`
       );
+    } else if (searchEngine === "Bing") {
+      window.open(`https://www.bing.com/search?q=${searchText}`);
     }
     setSearchText("");
   };

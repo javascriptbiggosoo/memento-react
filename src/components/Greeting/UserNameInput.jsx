@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useRecoilState } from "recoil";
+import { userNameState } from "../../atoms";
 
 export default function UserNameInput({ onSubmit }) {
-  const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useRecoilState(userNameState);
   const handleSubmit = (ev) => {
     ev.preventDefault();
     onSubmit(userName);

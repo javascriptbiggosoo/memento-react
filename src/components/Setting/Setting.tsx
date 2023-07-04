@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import styled from "styled-components";
 import { Overlay } from "../UI/Overlay";
+import { useRecoilState } from "recoil";
+import { searchEngineState } from "../../atoms";
 
-const Box = styled(motion.div)`
+const Modal = styled(motion.div)`
   background-color: rgba(225, 225, 225, 1);
   border-radius: 40px;
   color: black;
@@ -16,9 +18,15 @@ const Box = styled(motion.div)`
 
 export default function Setting() {
   const [showSettings, setShowSettings] = useState(false);
+  const [searchEngine, setSearchEngine] = useRecoilState(searchEngineState);
   const toggleSettings = (ev: React.MouseEvent<HTMLOrSVGElement>) => {
     if (ev.currentTarget !== ev.target) return;
     setShowSettings((prev) => !prev);
+  };
+
+  const handleOptionClick = (ev: React.ChangeEvent<HTMLSelectElement>) => {
+    console.log(ev.currentTarget.value);
+    setSearchEngine(ev.currentTarget.value);
   };
 
   return (
@@ -44,20 +52,42 @@ export default function Setting() {
             setShowSettings(false);
           }}
         >
-          <Box
+          <Modal
+            onClick={(ev) => ev.stopPropagation()}
             style={{
               width: 400,
               height: 500,
             }}
           >
             <ul>
-              <li>월페이퍼 변경</li>
-              <li>검색 엔진 변경</li>
-              <li>...</li>
-              <li>등 구현 예정</li>
+              <li>
+                검색 엔진:
+                <select name="searchEngine" onChange={handleOptionClick}>
+                  {["Naver", "Google", "Bing", "DuckDuckGo"].map(
+                    (engine, idx) => (
+                      <option
+                        value={engine}
+                        key={idx}
+                        disabled={searchEngine === engine}
+                      >
+                        {engine}
+                      </option>
+                    )
+                  )}
+                </select>
+              </li>
+              {/* <li>
+                사용자명 변경:
+                <input
+                  style={{ backgroundColor: "grey" }}
+                  type="text"
+                  placeholder="이름을 입력해주세요
+              "
+                />
+              </li> */}
             </ul>
             <button onClick={toggleSettings}>닫기</button>
-          </Box>
+          </Modal>
         </Overlay>
       )}
     </>
