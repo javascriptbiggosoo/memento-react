@@ -2,16 +2,22 @@ import { useState, useEffect } from "react";
 
 export const usePosition = () => {
   const [position, setPosition] = useState({});
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
 
-  const onChange = ({ coords }) => {
+  const onChange = ({
+    coords,
+  }: {
+    coords: { latitude: number; longitude: number };
+  }) => {
     setPosition({
       latitude: coords.latitude,
       longitude: coords.longitude,
     });
   };
-  const onError = (error) => {
-    setError(error.message);
+  const onError = (err: GeolocationPositionError) => {
+    console.warn("ERROR(" + err.code + "): " + err.message);
+
+    setError(err.message);
   };
   useEffect(() => {
     const geo = navigator.geolocation;

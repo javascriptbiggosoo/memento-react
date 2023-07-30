@@ -1,19 +1,24 @@
 import styled from "styled-components";
-import { useState } from "react";
+import React, { useState } from "react";
+
+interface IProps {
+  onAddToDo: (toDo: string) => void;
+}
+
 const Input = styled.input`
   width: 100%;
   font-size: 1.1em;
   color: white;
 `;
 
-export default function ToDoInput({ onAddToDo }) {
+export default function ToDoInput({ onAddToDo }: IProps) {
   const [inputValue, setInputValue] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (ev: React.FormEvent<HTMLFormElement>) => {
+    ev.preventDefault();
     onAddToDo(inputValue);
     setInputValue("");
   };
-  const handleChange = (ev) => {
+  const handleChange = (ev: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(ev.target.value);
   };
   return (

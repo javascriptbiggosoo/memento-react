@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { getWeatherData } from "../../apis/weatherMap";
 import { motion } from "framer-motion";
-import { useQueries, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { usePosition } from "../../hooks/usePosition";
 
 const WeatherContainer = styled.section``;

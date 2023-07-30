@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const 십의자리0채우기 = (num) => {
+const 십의자리0채우기 = (num: number) => {
   if (num < 10) {
     return "0" + num;
   }
@@ -14,7 +14,7 @@ const ClockContainer = styled.div`
 `;
 
 export default function Clock() {
-  const [dateNow, setDateNow] = useState(null);
+  const [dateNow, setDateNow] = useState<null | Date>(null);
   useEffect(() => {
     const interval = setInterval(() => {
       const today = new Date();

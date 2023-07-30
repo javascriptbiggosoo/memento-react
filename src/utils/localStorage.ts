@@ -1,6 +1,6 @@
 const localStorage = window.localStorage;
 
-export const setItem = (key, data) => {
+export const setItem = (key: string, data: unknown) => {
   const item = JSON.stringify(data);
   try {
     localStorage.setItem(key, item);
@@ -12,7 +12,11 @@ export const setItem = (key, data) => {
   }
 };
 
-export const getItem = (key, defaultValue) => {
+export const getItem = (key: string, defaultValue: unknown) => {
   const item = localStorage.getItem(key);
-  return JSON.parse(item) || defaultValue;
+
+  if (!item) {
+    return defaultValue;
+  }
+  return JSON.parse(item);
 };

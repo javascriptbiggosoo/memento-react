@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import UserNameInput from "./UserNameInput";
 import GreetingMessage from "./GreetingMessage";
-import { getItem } from "../../utils/localStorage";
-import { setItem } from "../../utils/localStorage";
+import { getItem, setItem } from "../../utils/localStorage";
 
 export default function Greeting() {
   const [userName, setUserName] = useState("");
@@ -13,12 +12,12 @@ export default function Greeting() {
     userName && setIsNameChanging(false);
   }, [userName]);
 
-  const handleSubmit = (userName) => {
+  const handleSubmit = (userName: string) => {
     setUserName(userName);
     setIsNameChanging(false);
     setItem("userName", userName);
   };
-  const handleButtonClick = (ev) => {
+  const handleButtonClick = (ev: React.MouseEvent<HTMLButtonElement>) => {
     ev.preventDefault();
     setIsNameChanging(true);
   };
