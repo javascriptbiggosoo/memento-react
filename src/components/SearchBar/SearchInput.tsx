@@ -7,8 +7,8 @@ export default function SearchInput() {
   const [searchEngine, setSearchEngine] = useRecoilState(searchEngineState);
   const [searchText, setSearchText] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (ev: React.FormEvent) => {
+    ev.preventDefault();
     if (searchEngine === "Google") {
       window.open(`https://www.google.com/search?q=${searchText}`);
     } else if (searchEngine === "DuckDuckGo") {
@@ -23,7 +23,7 @@ export default function SearchInput() {
     setSearchText("");
   };
 
-  const handleChange = (ev) => {
+  const handleChange = (ev: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(ev.target.value);
   };
 
