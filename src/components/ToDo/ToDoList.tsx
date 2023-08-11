@@ -1,12 +1,19 @@
 import styled from "styled-components";
+import { IToDo } from "./types";
+
+interface ToDoListProps {
+  toDos: IToDo[];
+  onToDoClick: (idx: number) => void;
+}
 
 const ToDo = styled.li`
   margin: 2px 0 2px 0;
-  opacity: ${({ isCompleted }) => isCompleted && "0.5"};
+  opacity: ${({ isCompleted }: { isCompleted: boolean }) =>
+    isCompleted && "0.5"};
 `;
 
-export default function ToDoList({ toDos, onToDoClick }) {
-  const handleClick = (ev) => {
+export default function ToDoList({ toDos, onToDoClick }: ToDoListProps) {
+  const handleClick = (ev: React.MouseEvent<HTMLLIElement>) => {
     const toDoIdx = Number.parseInt(ev.target.closest("li").dataset.id);
     onToDoClick(toDoIdx);
   };

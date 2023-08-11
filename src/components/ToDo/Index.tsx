@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { getItem, setItem } from "../../utils/localStorage";
 import { useRecoilState } from "recoil";
 import { toDoState } from "../../atoms";
+import { IToDo } from "./types";
 
 const ToDoContainer = styled.section`
   border: 1px solid;
@@ -27,19 +28,19 @@ export default function ToDo() {
 
   useEffect(() => {
     const initialToDos = getItem("toDos", []).filter(
-      (toDo) => toDo.isCompleted === false
+      (toDo: IToDo) => toDo.isCompleted === false
     );
     // console.log(initialToDos);
     setToDos(initialToDos);
   }, [setToDos]);
 
-  const handleAddToDo = (toDo) => {
+  const handleAddToDo = (toDo: string) => {
     setToDos((toDos) => {
       return [...toDos, { toDo: toDo, isCompleted: false }];
     });
     setItem("toDos", toDos);
   };
-  const handleToDoClick = (toDoIdx) => {
+  const handleToDoClick = (toDoIdx: number) => {
     setToDos((toDos) =>
       toDos.map(({ toDo, isCompleted }, idx) => {
         if (idx === toDoIdx) {
