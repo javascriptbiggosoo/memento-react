@@ -1,6 +1,6 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useRecoilState } from "recoil";
-import styled from "styled-components";
+
 import { searchEngineState } from "../../atoms";
 
 export default function SearchInput() {

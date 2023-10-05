@@ -1,6 +1,7 @@
+import styled from "styled-components";
+
 import Setting from "../Setting/Setting";
 import ToDo from "../ToDo/Index";
-import styled from "styled-components";
 
 const BottomContainer = styled.footer`
   display: flex;

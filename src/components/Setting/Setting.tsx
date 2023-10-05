@@ -1,8 +1,10 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
+
 import styled from "styled-components";
-import { Overlay } from "../UI/Overlay";
 import { useRecoilState } from "recoil";
+import { motion } from "framer-motion";
+
+import { Overlay } from "../UI/Overlay";
 import { searchEngineState } from "../../atoms";
 
 const Modal = styled(motion.div)`

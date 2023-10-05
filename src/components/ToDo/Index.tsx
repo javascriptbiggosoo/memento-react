@@ -1,11 +1,13 @@
-import styled from "styled-components";
-import ToDoInput from "./ToDoInput";
-import ToDoList from "./ToDoList";
 import { useEffect } from "react";
-import { getItem, setItem } from "../../utils/localStorage";
+
 import { useRecoilState } from "recoil";
+import styled from "styled-components";
+
+import { getItem, setItem } from "../../utils/localStorage";
 import { toDoState } from "../../atoms";
 import { IToDo } from "./types";
+import ToDoInput from "./ToDoInput";
+import ToDoList from "./ToDoList";
 
 const ToDoContainer = styled.section`
   border: 1px solid;

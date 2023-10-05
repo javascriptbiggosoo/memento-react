@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import SearchBar from "../SearchBar/Index";
 import Weather from "../Weather/Index";
 

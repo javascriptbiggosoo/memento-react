@@ -1,8 +1,10 @@
-import styled from "styled-components";
-import { getWeatherData } from "../../apis/weatherMap";
-import { motion } from "framer-motion";
-import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
+
+import { useQuery } from "@tanstack/react-query";
+import styled from "styled-components";
+import { motion } from "framer-motion";
+
+import { getWeatherData } from "../../apis/weatherMap";
 
 const WeatherContainer = styled.section``;
 const Div = styled(motion.div)`
@@ -17,15 +19,6 @@ export default function Weather() {
     latitude: 9999,
     longitude: 9999,
   });
-
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const { latitude, longitude } = position.coords;
-      console.log(latitude, longitude);
-      setCoordinates({ latitude, longitude });
-    });
-  }, []);
-
   const {
     isLoading,
     data: weatherData,
@@ -42,6 +35,14 @@ export default function Weather() {
     );
     console.error(error);
   }
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const { latitude, longitude } = position.coords;
+      // console.log(latitude, longitude);
+      setCoordinates({ latitude, longitude });
+    });
+  }, []);
 
   return (
     <WeatherContainer>

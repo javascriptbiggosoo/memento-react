@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+
+import { getItem, setItem } from "../../utils/localStorage";
 import UserNameInput from "./UserNameInput";
 import GreetingMessage from "./GreetingMessage";
-import { getItem, setItem } from "../../utils/localStorage";
 
 export default function Greeting() {
   const [userName, setUserName] = useState("");
