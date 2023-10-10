@@ -1,4 +1,5 @@
 import { atom } from "recoil";
+
 import { IToDo } from "./components/ToDo/types";
 
 export const toDoState = atom<IToDo[]>({

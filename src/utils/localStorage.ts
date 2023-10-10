@@ -8,7 +8,7 @@ export const setItem = (key: string, data: unknown) => {
     alert(
       `${key} 추가에 실패 했습니다. 총 데이터 용량이 5MB를 초과된 경우일 수 있습니다.`
     );
-    console.log(err);
+    console.error(err);
   }
 };
 

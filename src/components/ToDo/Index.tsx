@@ -38,17 +38,20 @@ export default function ToDo() {
 
   const handleAddToDo = (toDo: string) => {
     setToDos((toDos) => {
-      return [...toDos, { toDo: toDo, isCompleted: false }];
+      return [
+        ...toDos,
+        { toDo: toDo, isCompleted: false, createdAt: new Date() },
+      ];
     });
     setItem("toDos", toDos);
   };
   const handleToDoClick = (toDoIdx: number) => {
     setToDos((toDos) =>
-      toDos.map(({ toDo, isCompleted }, idx) => {
+      toDos.map(({ toDo, isCompleted, createdAt }, idx) => {
         if (idx === toDoIdx) {
           isCompleted = !isCompleted;
         }
-        return { toDo, isCompleted };
+        return { toDo, isCompleted, createdAt };
       })
     );
   };

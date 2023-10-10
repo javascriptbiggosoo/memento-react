@@ -27,9 +27,9 @@ function App() {
   return (
     <>
       <Container className="App">
-        <Top></Top>
-        <Center></Center>
-        <Bottom></Bottom>
+        <Top />
+        <Center />
+        <Bottom />
       </Container>
     </>
   );

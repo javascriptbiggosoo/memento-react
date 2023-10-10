@@ -13,8 +13,8 @@ const TopContainer = styled.header`
 export default function Top() {
   return (
     <TopContainer>
-      <SearchBar></SearchBar>
-      <Weather></Weather>
+      <SearchBar />
+      <Weather />
     </TopContainer>
   );
 }

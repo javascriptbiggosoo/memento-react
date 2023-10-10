@@ -9,13 +9,14 @@ interface ToDoListProps {
 
 const ToDo = styled.li`
   margin: 2px 0 2px 0;
+  cursor: pointer;
   opacity: ${({ isCompleted }: { isCompleted: boolean }) =>
     isCompleted && "0.5"};
 `;
 
 export default function ToDoList({ toDos, onToDoClick }: ToDoListProps) {
   const handleClick = (ev: React.MouseEvent<HTMLLIElement>) => {
-    const toDoIdx = Number.parseInt(ev.target.closest("li").dataset.id);
+    const toDoIdx = Number.parseInt(ev.currentTarget.getAttribute("data-idx")!);
     onToDoClick(toDoIdx);
   };
   return (
@@ -23,7 +24,7 @@ export default function ToDoList({ toDos, onToDoClick }: ToDoListProps) {
       {toDos.map(({ toDo, isCompleted }, idx) => (
         <ToDo
           key={idx}
-          data-id={idx}
+          data-idx={idx}
           onClick={handleClick}
           isCompleted={isCompleted}
         >
