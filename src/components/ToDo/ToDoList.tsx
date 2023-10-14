@@ -21,9 +21,9 @@ export default function ToDoList({ toDos, onToDoClick }: ToDoListProps) {
   };
   return (
     <ul>
-      {toDos.map(({ toDo, isCompleted }, idx) => (
+      {toDos.map(({ toDo, isCompleted, createdAt }, idx) => (
         <ToDo
-          key={idx}
+          key={createdAt + "" + idx}
           data-idx={idx}
           onClick={handleClick}
           isCompleted={isCompleted}

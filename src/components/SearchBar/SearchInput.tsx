@@ -33,7 +33,7 @@ export default function SearchInput() {
         placeholder={searchEngine}
         value={searchText}
         onChange={handleChange}
-      ></input>
+      />
     </form>
   );
 }

@@ -25,13 +25,11 @@ const Container = styled.div`
 
 function App() {
   return (
-    <>
-      <Container className="App">
-        <Top />
-        <Center />
-        <Bottom />
-      </Container>
-    </>
+    <Container className="App">
+      <Top />
+      <Center />
+      <Bottom />
+    </Container>
   );
 }
 
