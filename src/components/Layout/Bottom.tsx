@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import Setting from "../Setting/Setting";
-import ToDo from "../ToDo/Index";
+import Setting from "../Setting";
+import ToDo from "../ToDo";
 
-const BottomContainer = styled.footer`
+const BottomContainer = styled.div`
   display: flex;
 
   justify-content: space-between;

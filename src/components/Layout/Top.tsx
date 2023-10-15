@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import SearchBar from "../SearchBar/Index";
+import SearchBar from "../SearchBar";
 import Weather from "../Weather/Index";
 
-const TopContainer = styled.header`
+const TopContainer = styled.div`
   display: flex;
 
   justify-content: space-between;

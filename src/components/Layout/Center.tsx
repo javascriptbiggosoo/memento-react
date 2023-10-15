@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import Clock from "../Clock/Index";
-import Greeting from "../Greeting/Index";
+import Clock from "../Clock";
+import Greeting from "../Greeting";
 
-const CenterContainer = styled.main`
+const CenterContainer = styled.div`
   width: 100%;
   text-align: center;
 `;
